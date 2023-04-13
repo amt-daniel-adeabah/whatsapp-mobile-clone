@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #F7E9DC;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Hide page on screen in this contrast */
+@media(min-width: 0px) and (max-width: 279px) {
+    body {
+        display: none;
+    }
+}
+
+/* Attribution */
+.attribution { 
+    font-size: 20px; 
+    text-align: center; 
+    margin-top: 30px;
+    font-weight: 900;
+}
+.attribution a { 
+    color: hsl(241, 93%, 39%); 
+    font-weight: 900;
+}
+
+/* Smallest screen */
+@media(min-width: 80px) and (max-width: 299px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* Normal smartphone screen */
+@media(min-width: 300px) and (max-width: 425px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* Tablet to larger screen */
+@media(min-width: 426px) and (max-width: 2560px) {
+    .container {
+        width: 421px;
+    }
+}
+
+.container {
+    height: 420px;
+    background: #0f0c0c;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+display: none;
+} /* If you want to hide or show scroll-bar*/
+
+
+/* icons auto sizes */
+i {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* navigation sections */
+.topbar {
+    border-radius: 10px 10px 0 0;
+    background-color: #141313;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding: 20px;
+}
+
+.topbar .select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #5d46c4;
+    font-size: 12px;
+    border-radius: 50px;
+    padding: 2px 5px 2px 5px;
+    margin-left: 90px;
+}
+.topbar .edit {
+    color: rgb(157, 157, 228);
+}
+.topbar .chats {
+    margin-left: 150px;
+}
+
+.topbar i{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #5d46c4;
+    font-size: 12px;
+    border-radius: 50px;
+    width: 22px;
+    padding: 2px 2px 2px 5px;
+}
+
+
+/* chats lists */
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #5c5c5c;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.list:hover {
+    opacity: 0.5;
+}
+
+.list-li-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.list-li-text {
+    padding-left: 20px;
+}
+
+.list h3 {
+    padding-bottom: 5px;
+    font-size: 0.8rem;
+    color: rgb(241, 241, 241);
+    font-weight: 500;
+}
+
+.list h5 {
+    font-size: 0.6rem;
+    color: rgb(110, 110, 110);
+}
+
+.list h5 i{
+    font-size: 0.6rem;
+    color: rgb(53, 52, 52);
+}
+
+.list h5 img{
+    width: 10px;
+    height: 10px;
+}
+
+.list-li-left {
+    text-align: left;
+}
+.list-li-left .has-story {
+    border: 1px solid rgb(0, 0, 255);
+    padding: 1px;
+}
+
+.list-li-right {
+    text-align: right;
+}
+.list-li-right div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+    font-size: 12px;
+    width: 15px;
+    background: rgb(70, 96, 214);
+    border-radius: 50px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* bottom nav */
+.bottom-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 30px 10px;
+    background: #141313;
+}
+
+.bottom-nav .icon-name h5 {
+    font-size: 0.9rem;
+    color: rgb(153, 151, 147);
+}
+
+.bottom-nav i {
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    color: #5f5b5b;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.bottom-nav .icon-name .active {
+    color: rgb(110, 101, 230);
+}
+
+.bottom-nav .icon-name img {
+    margin-left: 10px;
+}
+
+.bottom-nav .icon-name .one {
+    padding-left: 5px;
+}
+.bottom-nav .icon-name .two {
+    padding-right: 19px;
+}
+.bottom-nav .icon-name .two-text {
+    padding-left: 7px;
+}
+.bottom-nav .icon-name .three {
+    padding-left: 15px;
+}
+.bottom-nav .icon-name .four {
+    padding-right: 10px;
+    position: relative;
+}
+.four div {
+    position: absolute;
+    top: -13px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+    font-size: 12px;
+    width: 15px;
+    background: rgb(255, 0, 0);
+    border-radius: 50px;
+}
+.bottom-nav .icon-name .four-text {
+    margin-left: 10px;
+}
+.bottom-nav .icon-name .five {
+    padding-right: 10px;
+}
